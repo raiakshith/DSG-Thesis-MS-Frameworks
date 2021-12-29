@@ -1,0 +1,5 @@
+#tag::zipkin[]
+tracing:
+  zipkin:
+    enabled: false
+#end::zipkin[]

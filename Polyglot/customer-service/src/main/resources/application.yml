@@ -1,0 +1,32 @@
+micronaut:
+  application:
+    name: customer-service
+endpoints:
+  health:
+    enabled: true
+    sensitive: false
+  metrics:
+    enabled: true
+    sensitive: false
+    export:
+      prometheus:
+        enabled: true
+        step: PT1M
+        descriptions: true
+        sensitive: false
+#tag::eureka[]
+eureka:
+  client:
+    registration:
+      enabled: true
+    defaultZone: "localhost:8761"
+#end::eureka[]
+#tag::zipkin[]
+tracing:
+  zipkin:
+    http:
+      url: http://localhost:9411
+    enabled: true
+    sampler:
+      probability: 1 # <1>
+#end::zipkin[]

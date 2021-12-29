@@ -1,0 +1,28 @@
+micronaut:
+  server:
+    port: 8081 # <1>
+  application:
+    name: bookcatalogue
+eureka:
+  client:
+    registration:
+      enabled: true
+    defaultZone: ${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}
+endpoints:
+  health:
+    enabled: true
+    sensitive: false
+  metrics:
+    enabled: true
+    export:
+      prometheus:
+        enabled: true
+        step: PT1M
+        descriptions: true
+tracing:
+  zipkin:
+    http:
+      url: http://localhost:9411
+    enabled: true
+    sampler:
+      probability: 1

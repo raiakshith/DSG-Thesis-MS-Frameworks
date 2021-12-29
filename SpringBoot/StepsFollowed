@@ -1,0 +1,38 @@
+Prometheus Docker
+» docker run -d -p 9090:9090 -v <path-to-prometheus.yml>:/etc/prometheus/prometheus.yml prom/prometheus
+
+example 
+Update the target ip address and port in yml files
+» docker run -d -p 9090:9090 -v /media/akshith/Others2/ISoSySc/MasterThesis/NewDocs_November/Code/SpringBoot/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
+
+you can find the dashbaord at http://localhost:9090
+
+Zipkin docker
+» docker run -d -p 9411:9411 openzipkin/zipkin
+
+you can find dashboard at http://localhost:9411/zipkin
+
+
+Grafana
+
+» docker run -d -p 3000:3000 grafana/grafana
+
+you can find the dashboard at http://localhost:3000
+
+
+To generate jar files
+
+» mvn install 
+
+To run 
+
+» java -jar «Jar file name»
+
+
+http://localhost:8080/portal-service/fullDetails/97
+
+examples found in the below urls
+https://stackabuse.com/spring-cloud-distributed-tracing-with-sleuth/
+https://stackabuse.com/monitoring-spring-boot-apps-with-micrometer-prometheus-and-grafana/
+
+https://spring.io/blog/2016/02/15/distributed-tracing-with-spring-cloud-sleuth-and-spring-cloud-zipkin

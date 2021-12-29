@@ -1,0 +1,6 @@
+AMQP_URI: 'pyamqp://guest:guest@localhost'
+WEB_SERVER_ADDRESS: 0.0.0.0:8081
+ZIPKIN:
+    HANDLER: HttpHandler
+    HANDLER_PARAMS:
+      url: http://localhost:9411/api/v1/spans

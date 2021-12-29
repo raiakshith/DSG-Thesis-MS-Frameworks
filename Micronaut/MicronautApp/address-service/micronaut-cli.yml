@@ -1,0 +1,5 @@
+applicationType: default
+defaultPackage: example.micronaut
+sourceLanguage: kotlin
+buildTool: maven
+features: [annotation-api, app-name,discovery-eureka, http-client, junit, kotlin, kotlin-application, logback, management, maven, netty-server, readme, shade, tracing-zipkin, yaml]

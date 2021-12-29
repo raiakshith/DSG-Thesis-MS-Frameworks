@@ -1,0 +1,31 @@
+pip install nameko
+
+apt-get install rabbitmq-server
+
+
+pip install nameko-prometheus
+
+pip install nameko-zipkin 
+
+
+nameko run customer-service --config config_customer.yaml
+
+nameko run address-service --config config_address.yaml
+
+nameko run portal-service --config config_portal.yaml
+
+
+docker run -d -p 9411:9411 openzipkin/zipkin
+
+docker run -d -p 9090:9090 -v /media/akshith/Others2/ISoSySc/MasterThesis/NewDocs_November/Code/Nameko/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
+
+
+
+http://localhost:9411/zipkin
+
+http://localhost:9090
+
+
+
+
+https://github.com/fraglab/nameko-zipkin
